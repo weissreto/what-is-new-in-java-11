@@ -16,11 +16,11 @@ import java.net.URI;
 public final class WhatIsNewInPath
 {
   /**
-   * Example call to new method {@link Path#of(String, String[])}.
+   * Example call to new method {@link Path#of(String, String...)}.
    * @since 11
-   * @see Path#of(String, String[])
+   * @see Path#of(String, String...)
    */
-  public static Path of(String first, String[] more)
+  public static Path of(String first, String... more)
   {
     Path result = Path.of(first, more);
     return result;

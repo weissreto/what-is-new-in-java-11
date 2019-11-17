@@ -14,19 +14,6 @@ package whatisnewin.java.lang;
 public final class WhatIsNewInClass<T>
 {
   /**
-   * Example call to new method {@link Class#isNestmateOf(Class)}.
-   * @since 11
-   * @see Class#isNestmateOf(Class)
-   */
-  public boolean isNestmateOf(Class<?> c)
-  {
-    Class<T> testee = $$$();
-
-    boolean result = testee.isNestmateOf(c);
-    return result;
-  }
-
-  /**
    * Example call to new method {@link Class#getNestHost()}.
    * @since 11
    * @see Class#getNestHost()
@@ -36,6 +23,19 @@ public final class WhatIsNewInClass<T>
     Class<T> testee = $$$();
 
     Class<?> result = testee.getNestHost();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link Class#isNestmateOf(Class)}.
+   * @since 11
+   * @see Class#isNestmateOf(Class)
+   */
+  public boolean isNestmateOf(Class<?> c)
+  {
+    Class<T> testee = $$$();
+
+    boolean result = testee.isNestmateOf(c);
     return result;
   }
 

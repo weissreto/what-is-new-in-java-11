@@ -24,15 +24,16 @@ public final class WhatIsNewInWebSocket
   public static final int NORMAL_CLOSURE = WebSocket.NORMAL_CLOSURE;
 
   /**
-   * Example call to new method {@link WebSocket#request(long)}.
+   * Example call to new method {@link WebSocket#sendText(CharSequence, boolean)}.
    * @since 11
-   * @see WebSocket#request(long)
+   * @see WebSocket#sendText(CharSequence, boolean)
    */
-  public void request(long n)
+  public CompletableFuture<WebSocket> sendText(CharSequence data, boolean last)
   {
     WebSocket testee = $$$();
 
-    testee.request(n);
+    CompletableFuture<WebSocket> result = testee.sendText(data, last);
+    return result;
   }
 
   /**
@@ -62,40 +63,15 @@ public final class WhatIsNewInWebSocket
   }
 
   /**
-   * Example call to new method {@link WebSocket#getSubprotocol()}.
+   * Example call to new method {@link WebSocket#sendPong(ByteBuffer)}.
    * @since 11
-   * @see WebSocket#getSubprotocol()
+   * @see WebSocket#sendPong(ByteBuffer)
    */
-  public String getSubprotocol()
+  public CompletableFuture<WebSocket> sendPong(ByteBuffer message)
   {
     WebSocket testee = $$$();
 
-    String result = testee.getSubprotocol();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link WebSocket#abort()}.
-   * @since 11
-   * @see WebSocket#abort()
-   */
-  public void abort()
-  {
-    WebSocket testee = $$$();
-
-    testee.abort();
-  }
-
-  /**
-   * Example call to new method {@link WebSocket#isInputClosed()}.
-   * @since 11
-   * @see WebSocket#isInputClosed()
-   */
-  public boolean isInputClosed()
-  {
-    WebSocket testee = $$$();
-
-    boolean result = testee.isInputClosed();
+    CompletableFuture<WebSocket> result = testee.sendPong(message);
     return result;
   }
 
@@ -113,15 +89,27 @@ public final class WhatIsNewInWebSocket
   }
 
   /**
-   * Example call to new method {@link WebSocket#sendPong(ByteBuffer)}.
+   * Example call to new method {@link WebSocket#request(long)}.
    * @since 11
-   * @see WebSocket#sendPong(ByteBuffer)
+   * @see WebSocket#request(long)
    */
-  public CompletableFuture<WebSocket> sendPong(ByteBuffer message)
+  public void request(long n)
   {
     WebSocket testee = $$$();
 
-    CompletableFuture<WebSocket> result = testee.sendPong(message);
+    testee.request(n);
+  }
+
+  /**
+   * Example call to new method {@link WebSocket#getSubprotocol()}.
+   * @since 11
+   * @see WebSocket#getSubprotocol()
+   */
+  public String getSubprotocol()
+  {
+    WebSocket testee = $$$();
+
+    String result = testee.getSubprotocol();
     return result;
   }
 
@@ -139,16 +127,28 @@ public final class WhatIsNewInWebSocket
   }
 
   /**
-   * Example call to new method {@link WebSocket#sendText(CharSequence, boolean)}.
+   * Example call to new method {@link WebSocket#isInputClosed()}.
    * @since 11
-   * @see WebSocket#sendText(CharSequence, boolean)
+   * @see WebSocket#isInputClosed()
    */
-  public CompletableFuture<WebSocket> sendText(CharSequence data, boolean last)
+  public boolean isInputClosed()
   {
     WebSocket testee = $$$();
 
-    CompletableFuture<WebSocket> result = testee.sendText(data, last);
+    boolean result = testee.isInputClosed();
     return result;
+  }
+
+  /**
+   * Example call to new method {@link WebSocket#abort()}.
+   * @since 11
+   * @see WebSocket#abort()
+   */
+  public void abort()
+  {
+    WebSocket testee = $$$();
+
+    testee.abort();
   }
 
   private WebSocket $$$()

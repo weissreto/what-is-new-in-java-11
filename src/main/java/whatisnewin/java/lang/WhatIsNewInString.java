@@ -28,15 +28,15 @@ public final class WhatIsNewInString
   }
 
   /**
-   * Example call to new method {@link String#isBlank()}.
+   * Example call to new method {@link String#stripLeading()}.
    * @since 11
-   * @see String#isBlank()
+   * @see String#stripLeading()
    */
-  public boolean isBlank()
+  public String stripLeading()
   {
     String testee = $$$();
 
-    boolean result = testee.isBlank();
+    String result = testee.stripLeading();
     return result;
   }
 
@@ -54,28 +54,15 @@ public final class WhatIsNewInString
   }
 
   /**
-   * Example call to new method {@link String#repeat(int)}.
+   * Example call to new method {@link String#isBlank()}.
    * @since 11
-   * @see String#repeat(int)
+   * @see String#isBlank()
    */
-  public String repeat(int count)
+  public boolean isBlank()
   {
     String testee = $$$();
 
-    String result = testee.repeat(count);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link String#stripLeading()}.
-   * @since 11
-   * @see String#stripLeading()
-   */
-  public String stripLeading()
-  {
-    String testee = $$$();
-
-    String result = testee.stripLeading();
+    boolean result = testee.isBlank();
     return result;
   }
 
@@ -89,6 +76,19 @@ public final class WhatIsNewInString
     String testee = $$$();
 
     Stream<String> result = testee.lines();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link String#repeat(int)}.
+   * @since 11
+   * @see String#repeat(int)
+   */
+  public String repeat(int count)
+  {
+    String testee = $$$();
+
+    String result = testee.repeat(count);
     return result;
   }
 

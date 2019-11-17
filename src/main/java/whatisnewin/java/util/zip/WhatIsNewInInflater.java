@@ -17,19 +17,6 @@ import java.util.zip.DataFormatException;
 public final class WhatIsNewInInflater
 {
   /**
-   * Example call to new method {@link Inflater#inflate(ByteBuffer)}.
-   * @since 11
-   * @see Inflater#inflate(ByteBuffer)
-   */
-  public int inflate(ByteBuffer output) throws DataFormatException
-  {
-    Inflater testee = $$$();
-
-    int result = testee.inflate(output);
-    return result;
-  }
-
-  /**
    * Example call to new method {@link Inflater#setInput(ByteBuffer)}.
    * @since 11
    * @see Inflater#setInput(ByteBuffer)
@@ -51,6 +38,19 @@ public final class WhatIsNewInInflater
     Inflater testee = $$$();
 
     testee.setDictionary(dictionary);
+  }
+
+  /**
+   * Example call to new method {@link Inflater#inflate(ByteBuffer)}.
+   * @since 11
+   * @see Inflater#inflate(ByteBuffer)
+   */
+  public int inflate(ByteBuffer output) throws DataFormatException
+  {
+    Inflater testee = $$$();
+
+    int result = testee.inflate(output);
+    return result;
   }
 
   private Inflater $$$()

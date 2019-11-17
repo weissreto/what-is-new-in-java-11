@@ -1,8 +1,8 @@
 package whatisnewin.java.net.http;
 
 import java.net.http.WebSocket.Listener;
-import java.util.concurrent.CompletionStage;
 import java.net.http.WebSocket;
+import java.util.concurrent.CompletionStage;
 import java.nio.ByteBuffer;
 
 /**
@@ -18,15 +18,27 @@ import java.nio.ByteBuffer;
 public final class WhatIsNewInWebSocket$Listener
 {
   /**
-   * Example call to new method {@link Listener#onPong(WebSocket, ByteBuffer)}.
+   * Example call to new method {@link Listener#onOpen(WebSocket)}.
    * @since 11
-   * @see Listener#onPong(WebSocket, ByteBuffer)
+   * @see Listener#onOpen(WebSocket)
    */
-  public CompletionStage<?> onPong(WebSocket webSocket, ByteBuffer message)
+  public void onOpen(WebSocket webSocket)
   {
     Listener testee = $$$();
 
-    CompletionStage<?> result = testee.onPong(webSocket, message);
+    testee.onOpen(webSocket);
+  }
+
+  /**
+   * Example call to new method {@link Listener#onText(WebSocket, CharSequence, boolean)}.
+   * @since 11
+   * @see Listener#onText(WebSocket, CharSequence, boolean)
+   */
+  public CompletionStage<?> onText(WebSocket webSocket, CharSequence data, boolean last)
+  {
+    Listener testee = $$$();
+
+    CompletionStage<?> result = testee.onText(webSocket, data, last);
     return result;
   }
 
@@ -57,6 +69,19 @@ public final class WhatIsNewInWebSocket$Listener
   }
 
   /**
+   * Example call to new method {@link Listener#onPong(WebSocket, ByteBuffer)}.
+   * @since 11
+   * @see Listener#onPong(WebSocket, ByteBuffer)
+   */
+  public CompletionStage<?> onPong(WebSocket webSocket, ByteBuffer message)
+  {
+    Listener testee = $$$();
+
+    CompletionStage<?> result = testee.onPong(webSocket, message);
+    return result;
+  }
+
+  /**
    * Example call to new method {@link Listener#onClose(WebSocket, int, String)}.
    * @since 11
    * @see Listener#onClose(WebSocket, int, String)
@@ -70,19 +95,6 @@ public final class WhatIsNewInWebSocket$Listener
   }
 
   /**
-   * Example call to new method {@link Listener#onText(WebSocket, CharSequence, boolean)}.
-   * @since 11
-   * @see Listener#onText(WebSocket, CharSequence, boolean)
-   */
-  public CompletionStage<?> onText(WebSocket webSocket, CharSequence data, boolean last)
-  {
-    Listener testee = $$$();
-
-    CompletionStage<?> result = testee.onText(webSocket, data, last);
-    return result;
-  }
-
-  /**
    * Example call to new method {@link Listener#onError(WebSocket, Throwable)}.
    * @since 11
    * @see Listener#onError(WebSocket, Throwable)
@@ -92,18 +104,6 @@ public final class WhatIsNewInWebSocket$Listener
     Listener testee = $$$();
 
     testee.onError(webSocket, error);
-  }
-
-  /**
-   * Example call to new method {@link Listener#onOpen(WebSocket)}.
-   * @since 11
-   * @see Listener#onOpen(WebSocket)
-   */
-  public void onOpen(WebSocket webSocket)
-  {
-    Listener testee = $$$();
-
-    testee.onOpen(webSocket);
   }
 
   private Listener $$$()

@@ -2,14 +2,14 @@ package whatisnewin.java.net.http;
 
 import java.net.http.HttpResponse.BodyHandlers;
 import java.net.http.HttpResponse.BodyHandler;
-import java.nio.file.Path;
-import java.nio.file.OpenOption;
-import java.nio.charset.Charset;
 import java.util.concurrent.Flow.Subscriber;
-import java.util.function.Function;
-import java.io.InputStream;
 import java.util.List;
 import java.nio.ByteBuffer;
+import java.util.function.Function;
+import java.nio.charset.Charset;
+import java.nio.file.Path;
+import java.nio.file.OpenOption;
+import java.io.InputStream;
 import java.util.stream.Stream;
 import java.util.function.Consumer;
 import java.util.Optional;
@@ -28,46 +28,24 @@ import java.util.concurrent.Flow.Publisher;
 public final class WhatIsNewInHttpResponse$BodyHandlers
 {
   /**
-   * Example call to new method {@link BodyHandlers#ofFile(Path, java.nio.file.OpenOption[])}.
+   * Example call to new method {@link BodyHandlers#fromSubscriber(Subscriber)}.
    * @since 11
-   * @see BodyHandlers#ofFile(Path, java.nio.file.OpenOption[])
+   * @see BodyHandlers#fromSubscriber(Subscriber)
    */
-  public static BodyHandler<Path> ofFile(Path file, OpenOption[] openOptions)
+  public static BodyHandler<Void> fromSubscriber(Subscriber<? super List<ByteBuffer>> subscriber)
   {
-    BodyHandler<Path> result = BodyHandlers.ofFile(file, openOptions);
+    BodyHandler<Void> result = BodyHandlers.fromSubscriber(subscriber);
     return result;
   }
 
   /**
-   * Example call to new method {@link BodyHandlers#ofFile(Path)}.
+   * Example call to new method {@link BodyHandlers#fromSubscriber(Subscriber, Function)}.
    * @since 11
-   * @see BodyHandlers#ofFile(Path)
+   * @see BodyHandlers#fromSubscriber(Subscriber, Function)
    */
-  public static BodyHandler<Path> ofFile(Path file)
+  public static <S extends Subscriber<? super List<ByteBuffer>>, T> BodyHandler<T> fromSubscriber(S subscriber, Function<? super S, ? extends T> finisher)
   {
-    BodyHandler<Path> result = BodyHandlers.ofFile(file);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link BodyHandlers#ofString(Charset)}.
-   * @since 11
-   * @see BodyHandlers#ofString(Charset)
-   */
-  public static BodyHandler<String> ofString(Charset charset)
-  {
-    BodyHandler<String> result = BodyHandlers.ofString(charset);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link BodyHandlers#ofString()}.
-   * @since 11
-   * @see BodyHandlers#ofString()
-   */
-  public static BodyHandler<String> ofString()
-  {
-    BodyHandler<String> result = BodyHandlers.ofString();
+    BodyHandler<T> result = BodyHandlers.fromSubscriber(subscriber, finisher);
     return result;
   }
 
@@ -94,50 +72,6 @@ public final class WhatIsNewInHttpResponse$BodyHandlers
   }
 
   /**
-   * Example call to new method {@link BodyHandlers#ofInputStream()}.
-   * @since 11
-   * @see BodyHandlers#ofInputStream()
-   */
-  public static BodyHandler<InputStream> ofInputStream()
-  {
-    BodyHandler<InputStream> result = BodyHandlers.ofInputStream();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link BodyHandlers#buffering(BodyHandler, int)}.
-   * @since 11
-   * @see BodyHandlers#buffering(BodyHandler, int)
-   */
-  public static <T> BodyHandler<T> buffering(BodyHandler<T> downstreamHandler, int bufferSize)
-  {
-    BodyHandler<T> result = BodyHandlers.buffering(downstreamHandler, bufferSize);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link BodyHandlers#fromSubscriber(Subscriber)}.
-   * @since 11
-   * @see BodyHandlers#fromSubscriber(Subscriber)
-   */
-  public static BodyHandler<Void> fromSubscriber(Subscriber<? super List<ByteBuffer>> subscriber)
-  {
-    BodyHandler<Void> result = BodyHandlers.fromSubscriber(subscriber);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link BodyHandlers#fromSubscriber(Subscriber, Function)}.
-   * @since 11
-   * @see BodyHandlers#fromSubscriber(Subscriber, Function)
-   */
-  public static <S extends Subscriber<? super List<ByteBuffer>>, T> BodyHandler<T> fromSubscriber(S subscriber, Function<? super S, ? extends T> finisher)
-  {
-    BodyHandler<T> result = BodyHandlers.fromSubscriber(subscriber, finisher);
-    return result;
-  }
-
-  /**
    * Example call to new method {@link BodyHandlers#discarding()}.
    * @since 11
    * @see BodyHandlers#discarding()
@@ -145,17 +79,6 @@ public final class WhatIsNewInHttpResponse$BodyHandlers
   public static BodyHandler<Void> discarding()
   {
     BodyHandler<Void> result = BodyHandlers.discarding();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link BodyHandlers#ofLines()}.
-   * @since 11
-   * @see BodyHandlers#ofLines()
-   */
-  public static BodyHandler<Stream<String>> ofLines()
-  {
-    BodyHandler<Stream<String>> result = BodyHandlers.ofLines();
     return result;
   }
 
@@ -171,24 +94,68 @@ public final class WhatIsNewInHttpResponse$BodyHandlers
   }
 
   /**
-   * Example call to new method {@link BodyHandlers#ofFileDownload(Path, java.nio.file.OpenOption[])}.
+   * Example call to new method {@link BodyHandlers#ofString(Charset)}.
    * @since 11
-   * @see BodyHandlers#ofFileDownload(Path, java.nio.file.OpenOption[])
+   * @see BodyHandlers#ofString(Charset)
    */
-  public static BodyHandler<Path> ofFileDownload(Path directory, OpenOption[] openOptions)
+  public static BodyHandler<String> ofString(Charset charset)
+  {
+    BodyHandler<String> result = BodyHandlers.ofString(charset);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyHandlers#ofFile(Path, OpenOption...)}.
+   * @since 11
+   * @see BodyHandlers#ofFile(Path, OpenOption...)
+   */
+  public static BodyHandler<Path> ofFile(Path file, OpenOption... openOptions)
+  {
+    BodyHandler<Path> result = BodyHandlers.ofFile(file, openOptions);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyHandlers#ofFile(Path)}.
+   * @since 11
+   * @see BodyHandlers#ofFile(Path)
+   */
+  public static BodyHandler<Path> ofFile(Path file)
+  {
+    BodyHandler<Path> result = BodyHandlers.ofFile(file);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyHandlers#ofFileDownload(Path, OpenOption...)}.
+   * @since 11
+   * @see BodyHandlers#ofFileDownload(Path, OpenOption...)
+   */
+  public static BodyHandler<Path> ofFileDownload(Path directory, OpenOption... openOptions)
   {
     BodyHandler<Path> result = BodyHandlers.ofFileDownload(directory, openOptions);
     return result;
   }
 
   /**
-   * Example call to new method {@link BodyHandlers#ofByteArray()}.
+   * Example call to new method {@link BodyHandlers#ofInputStream()}.
    * @since 11
-   * @see BodyHandlers#ofByteArray()
+   * @see BodyHandlers#ofInputStream()
    */
-  public static BodyHandler<byte[]> ofByteArray()
+  public static BodyHandler<InputStream> ofInputStream()
   {
-    BodyHandler<byte[]> result = BodyHandlers.ofByteArray();
+    BodyHandler<InputStream> result = BodyHandlers.ofInputStream();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyHandlers#ofLines()}.
+   * @since 11
+   * @see BodyHandlers#ofLines()
+   */
+  public static BodyHandler<Stream<String>> ofLines()
+  {
+    BodyHandler<Stream<String>> result = BodyHandlers.ofLines();
     return result;
   }
 
@@ -204,6 +171,28 @@ public final class WhatIsNewInHttpResponse$BodyHandlers
   }
 
   /**
+   * Example call to new method {@link BodyHandlers#ofByteArray()}.
+   * @since 11
+   * @see BodyHandlers#ofByteArray()
+   */
+  public static BodyHandler<byte[]> ofByteArray()
+  {
+    BodyHandler<byte[]> result = BodyHandlers.ofByteArray();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyHandlers#ofString()}.
+   * @since 11
+   * @see BodyHandlers#ofString()
+   */
+  public static BodyHandler<String> ofString()
+  {
+    BodyHandler<String> result = BodyHandlers.ofString();
+    return result;
+  }
+
+  /**
    * Example call to new method {@link BodyHandlers#ofPublisher()}.
    * @since 11
    * @see BodyHandlers#ofPublisher()
@@ -211,6 +200,17 @@ public final class WhatIsNewInHttpResponse$BodyHandlers
   public static BodyHandler<Publisher<List<ByteBuffer>>> ofPublisher()
   {
     BodyHandler<Publisher<List<ByteBuffer>>> result = BodyHandlers.ofPublisher();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyHandlers#buffering(BodyHandler, int)}.
+   * @since 11
+   * @see BodyHandlers#buffering(BodyHandler, int)
+   */
+  public static <T> BodyHandler<T> buffering(BodyHandler<T> downstreamHandler, int bufferSize)
+  {
+    BodyHandler<T> result = BodyHandlers.buffering(downstreamHandler, bufferSize);
     return result;
   }
 

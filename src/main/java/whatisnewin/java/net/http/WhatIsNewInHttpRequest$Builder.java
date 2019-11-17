@@ -33,6 +33,19 @@ public final class WhatIsNewInHttpRequest$Builder
   }
 
   /**
+   * Example call to new method {@link Builder#expectContinue(boolean)}.
+   * @since 11
+   * @see Builder#expectContinue(boolean)
+   */
+  public Builder expectContinue(boolean enable)
+  {
+    Builder testee = $$$();
+
+    Builder result = testee.expectContinue(enable);
+    return result;
+  }
+
+  /**
    * Example call to new method {@link Builder#version(Version)}.
    * @since 11
    * @see Builder#version(Version)
@@ -42,6 +55,32 @@ public final class WhatIsNewInHttpRequest$Builder
     Builder testee = $$$();
 
     Builder result = testee.version(version);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link Builder#header(String, String)}.
+   * @since 11
+   * @see Builder#header(String, String)
+   */
+  public Builder header(String name, String value)
+  {
+    Builder testee = $$$();
+
+    Builder result = testee.header(name, value);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link Builder#headers(String...)}.
+   * @since 11
+   * @see Builder#headers(String...)
+   */
+  public Builder headers(String... headers)
+  {
+    Builder testee = $$$();
+
+    Builder result = testee.headers(headers);
     return result;
   }
 
@@ -72,15 +111,15 @@ public final class WhatIsNewInHttpRequest$Builder
   }
 
   /**
-   * Example call to new method {@link Builder#PUT(BodyPublisher)}.
+   * Example call to new method {@link Builder#GET()}.
    * @since 11
-   * @see Builder#PUT(BodyPublisher)
+   * @see Builder#GET()
    */
-  public Builder PUT(BodyPublisher bodyPublisher)
+  public Builder GET()
   {
     Builder testee = $$$();
 
-    Builder result = testee.PUT(bodyPublisher);
+    Builder result = testee.GET();
     return result;
   }
 
@@ -98,6 +137,32 @@ public final class WhatIsNewInHttpRequest$Builder
   }
 
   /**
+   * Example call to new method {@link Builder#PUT(BodyPublisher)}.
+   * @since 11
+   * @see Builder#PUT(BodyPublisher)
+   */
+  public Builder PUT(BodyPublisher bodyPublisher)
+  {
+    Builder testee = $$$();
+
+    Builder result = testee.PUT(bodyPublisher);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link Builder#DELETE()}.
+   * @since 11
+   * @see Builder#DELETE()
+   */
+  public Builder DELETE()
+  {
+    Builder testee = $$$();
+
+    Builder result = testee.DELETE();
+    return result;
+  }
+
+  /**
    * Example call to new method {@link Builder#method(String, BodyPublisher)}.
    * @since 11
    * @see Builder#method(String, BodyPublisher)
@@ -107,45 +172,6 @@ public final class WhatIsNewInHttpRequest$Builder
     Builder testee = $$$();
 
     Builder result = testee.method(method, bodyPublisher);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link Builder#headers(String[])}.
-   * @since 11
-   * @see Builder#headers(String[])
-   */
-  public Builder headers(String[] headers)
-  {
-    Builder testee = $$$();
-
-    Builder result = testee.headers(headers);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link Builder#header(String, String)}.
-   * @since 11
-   * @see Builder#header(String, String)
-   */
-  public Builder header(String name, String value)
-  {
-    Builder testee = $$$();
-
-    Builder result = testee.header(name, value);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link Builder#copy()}.
-   * @since 11
-   * @see Builder#copy()
-   */
-  public Builder copy()
-  {
-    Builder testee = $$$();
-
-    Builder result = testee.copy();
     return result;
   }
 
@@ -163,41 +189,15 @@ public final class WhatIsNewInHttpRequest$Builder
   }
 
   /**
-   * Example call to new method {@link Builder#GET()}.
+   * Example call to new method {@link Builder#copy()}.
    * @since 11
-   * @see Builder#GET()
+   * @see Builder#copy()
    */
-  public Builder GET()
+  public Builder copy()
   {
     Builder testee = $$$();
 
-    Builder result = testee.GET();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link Builder#expectContinue(boolean)}.
-   * @since 11
-   * @see Builder#expectContinue(boolean)
-   */
-  public Builder expectContinue(boolean enable)
-  {
-    Builder testee = $$$();
-
-    Builder result = testee.expectContinue(enable);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link Builder#DELETE()}.
-   * @since 11
-   * @see Builder#DELETE()
-   */
-  public Builder DELETE()
-  {
-    Builder testee = $$$();
-
-    Builder result = testee.DELETE();
+    Builder result = testee.copy();
     return result;
   }
 

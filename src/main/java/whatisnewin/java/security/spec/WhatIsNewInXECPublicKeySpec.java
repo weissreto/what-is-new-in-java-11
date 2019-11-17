@@ -27,19 +27,6 @@ public final class WhatIsNewInXECPublicKeySpec
   }
 
   /**
-   * Example call to new method {@link XECPublicKeySpec#getU()}.
-   * @since 11
-   * @see XECPublicKeySpec#getU()
-   */
-  public BigInteger getU()
-  {
-    XECPublicKeySpec testee = $$$();
-
-    BigInteger result = testee.getU();
-    return result;
-  }
-
-  /**
    * Example call to new method {@link XECPublicKeySpec#getParams()}.
    * @since 11
    * @see XECPublicKeySpec#getParams()
@@ -49,6 +36,19 @@ public final class WhatIsNewInXECPublicKeySpec
     XECPublicKeySpec testee = $$$();
 
     AlgorithmParameterSpec result = testee.getParams();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link XECPublicKeySpec#getU()}.
+   * @since 11
+   * @see XECPublicKeySpec#getU()
+   */
+  public BigInteger getU()
+  {
+    XECPublicKeySpec testee = $$$();
+
+    BigInteger result = testee.getU();
     return result;
   }
 

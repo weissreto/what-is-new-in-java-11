@@ -1,12 +1,12 @@
 package whatisnewin.java.net.http;
 
 import java.net.http.HttpRequest;
-import java.util.Optional;
-import java.time.Duration;
 import java.net.http.HttpRequest.Builder;
 import java.net.URI;
-import java.net.http.HttpClient.Version;
+import java.util.Optional;
 import java.net.http.HttpRequest.BodyPublisher;
+import java.time.Duration;
+import java.net.http.HttpClient.Version;
 import java.net.http.HttpHeaders;
 
 /**
@@ -21,19 +21,6 @@ import java.net.http.HttpHeaders;
  */
 public final class WhatIsNewInHttpRequest
 {
-  /**
-   * Example call to new method {@link HttpRequest#timeout()}.
-   * @since 11
-   * @see HttpRequest#timeout()
-   */
-  public Optional<Duration> timeout()
-  {
-    HttpRequest testee = $$$();
-
-    Optional<Duration> result = testee.timeout();
-    return result;
-  }
-
   /**
    * Example call to new method {@link HttpRequest#newBuilder(URI)}.
    * @since 11
@@ -53,32 +40,6 @@ public final class WhatIsNewInHttpRequest
   public static Builder newBuilder()
   {
     Builder result = HttpRequest.newBuilder();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link HttpRequest#uri()}.
-   * @since 11
-   * @see HttpRequest#uri()
-   */
-  public URI uri()
-  {
-    HttpRequest testee = $$$();
-
-    URI result = testee.uri();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link HttpRequest#version()}.
-   * @since 11
-   * @see HttpRequest#version()
-   */
-  public Optional<Version> version()
-  {
-    HttpRequest testee = $$$();
-
-    Optional<Version> result = testee.version();
     return result;
   }
 
@@ -109,6 +70,19 @@ public final class WhatIsNewInHttpRequest
   }
 
   /**
+   * Example call to new method {@link HttpRequest#timeout()}.
+   * @since 11
+   * @see HttpRequest#timeout()
+   */
+  public Optional<Duration> timeout()
+  {
+    HttpRequest testee = $$$();
+
+    Optional<Duration> result = testee.timeout();
+    return result;
+  }
+
+  /**
    * Example call to new method {@link HttpRequest#expectContinue()}.
    * @since 11
    * @see HttpRequest#expectContinue()
@@ -118,6 +92,32 @@ public final class WhatIsNewInHttpRequest
     HttpRequest testee = $$$();
 
     boolean result = testee.expectContinue();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link HttpRequest#uri()}.
+   * @since 11
+   * @see HttpRequest#uri()
+   */
+  public URI uri()
+  {
+    HttpRequest testee = $$$();
+
+    URI result = testee.uri();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link HttpRequest#version()}.
+   * @since 11
+   * @see HttpRequest#version()
+   */
+  public Optional<Version> version()
+  {
+    HttpRequest testee = $$$();
+
+    Optional<Version> result = testee.version();
     return result;
   }
 

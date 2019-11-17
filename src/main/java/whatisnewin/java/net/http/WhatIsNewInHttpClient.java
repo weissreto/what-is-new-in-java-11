@@ -1,21 +1,21 @@
 package whatisnewin.java.net.http;
 
 import java.net.http.HttpClient;
-import java.net.http.WebSocket.Builder;
+import java.net.http.HttpClient.Builder;
 import java.util.Optional;
-import java.time.Duration;
-import javax.net.ssl.SSLParameters;
 import java.net.CookieHandler;
+import java.time.Duration;
+import java.net.http.HttpClient.Redirect;
+import java.net.ProxySelector;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLParameters;
 import java.net.Authenticator;
+import java.net.http.HttpClient.Version;
+import java.util.concurrent.Executor;
 import java.net.http.HttpResponse;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse.BodyHandler;
 import java.io.IOException;
-import java.net.ProxySelector;
-import java.net.http.HttpClient.Redirect;
-import java.util.concurrent.Executor;
-import javax.net.ssl.SSLContext;
-import java.net.http.HttpClient.Version;
 import java.util.concurrent.CompletableFuture;
 import java.net.http.HttpResponse.PushPromiseHandler;
 
@@ -32,41 +32,24 @@ import java.net.http.HttpResponse.PushPromiseHandler;
 public final class WhatIsNewInHttpClient
 {
   /**
-   * Example call to new method {@link HttpClient#newWebSocketBuilder()}.
+   * Example call to new method {@link HttpClient#newHttpClient()}.
    * @since 11
-   * @see HttpClient#newWebSocketBuilder()
+   * @see HttpClient#newHttpClient()
    */
-  public Builder newWebSocketBuilder()
+  public static HttpClient newHttpClient()
   {
-    HttpClient testee = $$$();
-
-    Builder result = testee.newWebSocketBuilder();
+    HttpClient result = HttpClient.newHttpClient();
     return result;
   }
 
   /**
-   * Example call to new method {@link HttpClient#connectTimeout()}.
+   * Example call to new method {@link HttpClient#newBuilder()}.
    * @since 11
-   * @see HttpClient#connectTimeout()
+   * @see HttpClient#newBuilder()
    */
-  public Optional<Duration> connectTimeout()
+  public static Builder newBuilder()
   {
-    HttpClient testee = $$$();
-
-    Optional<Duration> result = testee.connectTimeout();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link HttpClient#sslParameters()}.
-   * @since 11
-   * @see HttpClient#sslParameters()
-   */
-  public SSLParameters sslParameters()
-  {
-    HttpClient testee = $$$();
-
-    SSLParameters result = testee.sslParameters();
+    Builder result = HttpClient.newBuilder();
     return result;
   }
 
@@ -84,41 +67,15 @@ public final class WhatIsNewInHttpClient
   }
 
   /**
-   * Example call to new method {@link HttpClient#authenticator()}.
+   * Example call to new method {@link HttpClient#connectTimeout()}.
    * @since 11
-   * @see HttpClient#authenticator()
+   * @see HttpClient#connectTimeout()
    */
-  public Optional<Authenticator> authenticator()
+  public Optional<Duration> connectTimeout()
   {
     HttpClient testee = $$$();
 
-    Optional<Authenticator> result = testee.authenticator();
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link HttpClient#send(HttpRequest, BodyHandler)}.
-   * @since 11
-   * @see HttpClient#send(HttpRequest, BodyHandler)
-   */
-  public <T> HttpResponse<T> send(HttpRequest request, BodyHandler<T> responseBodyHandler) throws IOException, InterruptedException
-  {
-    HttpClient testee = $$$();
-
-    HttpResponse<T> result = testee.send(request, responseBodyHandler);
-    return result;
-  }
-
-  /**
-   * Example call to new method {@link HttpClient#proxy()}.
-   * @since 11
-   * @see HttpClient#proxy()
-   */
-  public Optional<ProxySelector> proxy()
-  {
-    HttpClient testee = $$$();
-
-    Optional<ProxySelector> result = testee.proxy();
+    Optional<Duration> result = testee.connectTimeout();
     return result;
   }
 
@@ -136,15 +93,15 @@ public final class WhatIsNewInHttpClient
   }
 
   /**
-   * Example call to new method {@link HttpClient#executor()}.
+   * Example call to new method {@link HttpClient#proxy()}.
    * @since 11
-   * @see HttpClient#executor()
+   * @see HttpClient#proxy()
    */
-  public Optional<Executor> executor()
+  public Optional<ProxySelector> proxy()
   {
     HttpClient testee = $$$();
 
-    Optional<Executor> result = testee.executor();
+    Optional<ProxySelector> result = testee.proxy();
     return result;
   }
 
@@ -162,13 +119,28 @@ public final class WhatIsNewInHttpClient
   }
 
   /**
-   * Example call to new method {@link HttpClient#newBuilder()}.
+   * Example call to new method {@link HttpClient#sslParameters()}.
    * @since 11
-   * @see HttpClient#newBuilder()
+   * @see HttpClient#sslParameters()
    */
-  public static java.net.http.HttpClient.Builder newBuilder()
+  public SSLParameters sslParameters()
   {
-    java.net.http.HttpClient.Builder result = HttpClient.newBuilder();
+    HttpClient testee = $$$();
+
+    SSLParameters result = testee.sslParameters();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link HttpClient#authenticator()}.
+   * @since 11
+   * @see HttpClient#authenticator()
+   */
+  public Optional<Authenticator> authenticator()
+  {
+    HttpClient testee = $$$();
+
+    Optional<Authenticator> result = testee.authenticator();
     return result;
   }
 
@@ -182,6 +154,32 @@ public final class WhatIsNewInHttpClient
     HttpClient testee = $$$();
 
     Version result = testee.version();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link HttpClient#executor()}.
+   * @since 11
+   * @see HttpClient#executor()
+   */
+  public Optional<Executor> executor()
+  {
+    HttpClient testee = $$$();
+
+    Optional<Executor> result = testee.executor();
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link HttpClient#send(HttpRequest, BodyHandler)}.
+   * @since 11
+   * @see HttpClient#send(HttpRequest, BodyHandler)
+   */
+  public <T> HttpResponse<T> send(HttpRequest request, BodyHandler<T> responseBodyHandler) throws IOException, InterruptedException
+  {
+    HttpClient testee = $$$();
+
+    HttpResponse<T> result = testee.send(request, responseBodyHandler);
     return result;
   }
 
@@ -212,13 +210,15 @@ public final class WhatIsNewInHttpClient
   }
 
   /**
-   * Example call to new method {@link HttpClient#newHttpClient()}.
+   * Example call to new method {@link HttpClient#newWebSocketBuilder()}.
    * @since 11
-   * @see HttpClient#newHttpClient()
+   * @see HttpClient#newWebSocketBuilder()
    */
-  public static HttpClient newHttpClient()
+  public java.net.http.WebSocket.Builder newWebSocketBuilder()
   {
-    HttpClient result = HttpClient.newHttpClient();
+    HttpClient testee = $$$();
+
+    java.net.http.WebSocket.Builder result = testee.newWebSocketBuilder();
     return result;
   }
 

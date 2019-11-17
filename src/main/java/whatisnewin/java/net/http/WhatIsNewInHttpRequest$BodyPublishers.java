@@ -4,9 +4,9 @@ import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpRequest.BodyPublisher;
 import java.util.concurrent.Flow.Publisher;
 import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
 import java.util.function.Supplier;
 import java.io.InputStream;
-import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.io.FileNotFoundException;
 
@@ -45,17 +45,6 @@ public final class WhatIsNewInHttpRequest$BodyPublishers
   }
 
   /**
-   * Example call to new method {@link BodyPublishers#ofInputStream(Supplier)}.
-   * @since 11
-   * @see BodyPublishers#ofInputStream(Supplier)
-   */
-  public static BodyPublisher ofInputStream(Supplier<? extends InputStream> streamSupplier)
-  {
-    BodyPublisher result = BodyPublishers.ofInputStream(streamSupplier);
-    return result;
-  }
-
-  /**
    * Example call to new method {@link BodyPublishers#ofString(String)}.
    * @since 11
    * @see BodyPublishers#ofString(String)
@@ -78,13 +67,13 @@ public final class WhatIsNewInHttpRequest$BodyPublishers
   }
 
   /**
-   * Example call to new method {@link BodyPublishers#noBody()}.
+   * Example call to new method {@link BodyPublishers#ofInputStream(Supplier)}.
    * @since 11
-   * @see BodyPublishers#noBody()
+   * @see BodyPublishers#ofInputStream(Supplier)
    */
-  public static BodyPublisher noBody()
+  public static BodyPublisher ofInputStream(Supplier<? extends InputStream> streamSupplier)
   {
-    BodyPublisher result = BodyPublishers.noBody();
+    BodyPublisher result = BodyPublishers.ofInputStream(streamSupplier);
     return result;
   }
 
@@ -129,6 +118,17 @@ public final class WhatIsNewInHttpRequest$BodyPublishers
   public static BodyPublisher ofByteArrays(Iterable<byte[]> iter)
   {
     BodyPublisher result = BodyPublishers.ofByteArrays(iter);
+    return result;
+  }
+
+  /**
+   * Example call to new method {@link BodyPublishers#noBody()}.
+   * @since 11
+   * @see BodyPublishers#noBody()
+   */
+  public static BodyPublisher noBody()
+  {
+    BodyPublisher result = BodyPublishers.noBody();
     return result;
   }
 
