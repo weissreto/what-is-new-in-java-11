@@ -124,7 +124,7 @@ public final class WhatIsNewInHttpResponse<T>
     return result;
   }
 
-  private HttpResponse $$$()
+  private HttpResponse<T> $$$()
   {
     return null;
   }

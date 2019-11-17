@@ -28,7 +28,7 @@ public final class WhatIsNewInHttpResponse$BodySubscriber<T>
     return result;
   }
 
-  private BodySubscriber $$$()
+  private BodySubscriber<T> $$$()
   {
     return null;
   }

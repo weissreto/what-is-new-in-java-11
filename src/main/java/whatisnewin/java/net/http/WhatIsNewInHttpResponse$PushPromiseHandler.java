@@ -43,7 +43,7 @@ public final class WhatIsNewInHttpResponse$PushPromiseHandler<T>
     return result;
   }
 
-  private PushPromiseHandler $$$()
+  private PushPromiseHandler<T> $$$()
   {
     return null;
   }

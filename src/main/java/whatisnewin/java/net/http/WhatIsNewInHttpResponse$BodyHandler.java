@@ -29,7 +29,7 @@ public final class WhatIsNewInHttpResponse$BodyHandler<T>
     return result;
   }
 
-  private BodyHandler $$$()
+  private BodyHandler<T> $$$()
   {
     return null;
   }

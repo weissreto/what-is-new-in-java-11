@@ -28,7 +28,7 @@ public final class WhatIsNewInCollection<E>
     return result;
   }
 
-  private Collection $$$()
+  private Collection<E> $$$()
   {
     return null;
   }
