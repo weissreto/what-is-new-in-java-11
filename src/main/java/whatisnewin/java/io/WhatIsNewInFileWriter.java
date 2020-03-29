@@ -47,4 +47,14 @@ public final class WhatIsNewInFileWriter
     FileWriter testee = new FileWriter(file, charset);
   }
 
+  /**
+   * Example call to new constructor {@link FileWriter#FileWriter(File, Charset, boolean)}.
+   * @since 11
+   * @see FileWriter#FileWriter(File, Charset, boolean)
+   */
+  public WhatIsNewInFileWriter(File file, Charset charset, boolean append) throws IOException
+  {
+    FileWriter testee = new FileWriter(file, charset, append);
+  }
+
 }

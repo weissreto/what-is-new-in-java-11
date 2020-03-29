@@ -26,4 +26,21 @@ public final class WhatIsNewInRSAPrivateKeySpec
     RSAPrivateKeySpec testee = new RSAPrivateKeySpec(modulus, privateExponent, params);
   }
 
+  /**
+   * Example call to new method {@link RSAPrivateKeySpec#getParams()}.
+   * @since 11
+   * @see RSAPrivateKeySpec#getParams()
+   */
+  public AlgorithmParameterSpec getParams()
+  {
+    RSAPrivateKeySpec testee = $$$();
+
+    AlgorithmParameterSpec result = testee.getParams();
+    return result;
+  }
+
+  private RSAPrivateKeySpec $$$()
+  {
+    return null;
+  }
 }

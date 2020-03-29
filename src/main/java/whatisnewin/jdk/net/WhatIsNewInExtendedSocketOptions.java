@@ -28,4 +28,11 @@ public final class WhatIsNewInExtendedSocketOptions
    */
   public static final java.net.SocketOption<Integer> TCP_KEEPINTERVAL = ExtendedSocketOptions.TCP_KEEPINTERVAL;
 
+  /**
+   * Example usage of the new field {@link ExtendedSocketOptions#TCP_KEEPCOUNT}.
+   * @since 11
+   * @see ExtendedSocketOptions#TCP_KEEPCOUNT
+   */
+  public static final java.net.SocketOption<Integer> TCP_KEEPCOUNT = ExtendedSocketOptions.TCP_KEEPCOUNT;
+
 }

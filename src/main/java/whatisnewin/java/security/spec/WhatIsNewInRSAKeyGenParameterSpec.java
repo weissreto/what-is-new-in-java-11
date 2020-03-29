@@ -26,4 +26,21 @@ public final class WhatIsNewInRSAKeyGenParameterSpec
     RSAKeyGenParameterSpec testee = new RSAKeyGenParameterSpec(keysize, publicExponent, keyParams);
   }
 
+  /**
+   * Example call to new method {@link RSAKeyGenParameterSpec#getKeyParams()}.
+   * @since 11
+   * @see RSAKeyGenParameterSpec#getKeyParams()
+   */
+  public AlgorithmParameterSpec getKeyParams()
+  {
+    RSAKeyGenParameterSpec testee = $$$();
+
+    AlgorithmParameterSpec result = testee.getKeyParams();
+    return result;
+  }
+
+  private RSAKeyGenParameterSpec $$$()
+  {
+    return null;
+  }
 }

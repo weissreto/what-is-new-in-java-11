@@ -27,6 +27,19 @@ public final class WhatIsNewInListSelectionModel
     return result;
   }
 
+  /**
+   * Example call to new method {@link ListSelectionModel#getSelectedItemsCount()}.
+   * @since 11
+   * @see ListSelectionModel#getSelectedItemsCount()
+   */
+  public int getSelectedItemsCount()
+  {
+    ListSelectionModel testee = $$$();
+
+    int result = testee.getSelectedItemsCount();
+    return result;
+  }
+
   private ListSelectionModel $$$()
   {
     return null;

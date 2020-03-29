@@ -26,4 +26,21 @@ public final class WhatIsNewInRSAPublicKeySpec
     RSAPublicKeySpec testee = new RSAPublicKeySpec(modulus, publicExponent, params);
   }
 
+  /**
+   * Example call to new method {@link RSAPublicKeySpec#getParams()}.
+   * @since 11
+   * @see RSAPublicKeySpec#getParams()
+   */
+  public AlgorithmParameterSpec getParams()
+  {
+    RSAPublicKeySpec testee = $$$();
+
+    AlgorithmParameterSpec result = testee.getParams();
+    return result;
+  }
+
+  private RSAPublicKeySpec $$$()
+  {
+    return null;
+  }
 }
